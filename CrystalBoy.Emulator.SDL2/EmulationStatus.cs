@@ -1,5 +1,4 @@
-﻿#if false
-#region Copyright Notice
+﻿#region Copyright Notice
 // This file is part of CrystalBoy.
 // Copyright © 2008-2011 Fabien Barbier
 // 
@@ -19,22 +18,14 @@
 
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using System.Text;
 
-namespace CrystalBoy.Decompiler
+namespace CrystalBoy.Emulator.SDL2
 {
-	static class Program
+	enum EmulationStatus
 	{
-		/// <summary>
-		/// Point d'entrée principal de l'application.
-		/// </summary>
-		[STAThread]
-		static void Main()
-		{
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
-		}
+		Stopped,
+		Paused,
+		Running
 	}
 }
-#endif

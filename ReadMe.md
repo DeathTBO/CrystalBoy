@@ -1,6 +1,28 @@
 CrystalBoy Game Boy Emulator
 ============================
 
+# Forked Readme
+
+This fork of CrystalBoy uses .Net Core, and replaces the renderer with SDL2/OpenGL. The main window now uses GTK# to manage settings and select roms.
+
+Original Project Page: https://github.com/GoldenCrystal/CrystalBoy
+
+### Fork Changes
+
+  * Change to .Net Core 2.2
+  * Remove Win Forms -> GTK# Replacement
+  * Remove SharpDX/GDI+ -> SDL2 Replacement (Renders via OpenGL)
+
+### Additional Fork Notes
+
+  * The initial goal was to get this working on Linux.
+  * Compiled and tested on Fedora 30, Kernel 5.1.11 - Plays Pokemon Yellow and Silver perfectly
+  * Some original features are not yet implemented. The debugger, and map viewer are missing.
+  * Audio is still not implemented.
+  * The last commit for CrystalBoy included Fody, but there was a configuration issue and it was removed temporarily. Todo: Add Fody and FodyCecil to next version.
+
+# Original README
+
 CrystalBoy is a GameBoy emulator written in C#.
 
 This project was started in August 2008 for a lot off different reasons.

@@ -133,7 +133,7 @@ namespace CrystalBoy.Emulation
 				this.externalRomBlock = null;
 				this.romInformation = null;
 				this.colorMode = ColorHardware;
-				ClearBreakpoints();
+				//ClearBreakpoints();
 				Reset(); // Will call “ResumeEmulation”…
 			}
 		}

@@ -5,7 +5,7 @@ using CrystalBoy.Core;
 using CrystalBoy.Emulation;
 using System.ComponentModel;
 
-namespace CrystalBoy.Emulator
+namespace CrystalBoy.Emulator.SDL2
 {
 	[DesignerCategory("Component")]
 	sealed class EmulatedGameBoy : IComponent, IClockManager, IDisposable

@@ -18,6 +18,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace CrystalBoy.Core
@@ -28,7 +30,13 @@ namespace CrystalBoy.Core
 
 		private static byte[] Load()
 		{
-			using (var stream = typeof(NintendoLogo).Assembly.GetManifestResourceStream(typeof(NintendoLogo), "NintendoLogo"))
+			string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase) + @"/NintendoLogo.bin";
+
+			path = path.Substring(5); //Remove the prefix 'file:'
+
+			return File.ReadAllBytes(path);
+
+			using (Stream stream = typeof(NintendoLogo).Assembly.GetManifestResourceStream(typeof(NintendoLogo), "NintendoLogo"))
 			{
 				byte[] data = new byte[stream.Length];
 

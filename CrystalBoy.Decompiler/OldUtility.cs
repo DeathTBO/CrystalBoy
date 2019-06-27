@@ -1,4 +1,5 @@
-﻿#region Copyright Notice
+﻿#if false
+#region Copyright Notice
 // This file is part of CrystalBoy.
 // Copyright (C) 2008 Fabien Barbier
 // 
@@ -216,3 +217,4 @@ namespace GameBoyDecompiler
 		}
 	}
 }
+#endif

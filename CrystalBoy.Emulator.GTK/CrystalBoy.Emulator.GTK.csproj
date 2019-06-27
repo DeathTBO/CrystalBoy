@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CrystalBoy.Emulation\CrystalBoy.Emulation.csproj" />
+      <ProjectReference Include="..\CrystalBoy.Emulator.Configuration\CrystalBoy.Emulator.Configuration.csproj" />
+      <ProjectReference Include="..\CrystalBoy.Emulator.SDL2\CrystalBoy.Emulator.SDL2.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include=".\Graphics\Play.png" />
+        <EmbeddedResource Include=".\Graphics\Pause.png" />
+        <EmbeddedResource Include=".\Graphics\FrameStep.png" />
+        <EmbeddedResource Include=".\Graphics\Stop.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GtkSharp" Version="3.22.24.37" />
+    </ItemGroup>
+</Project>
+ 
