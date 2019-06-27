@@ -10,8 +10,6 @@ namespace CrystalBoy.Emulator.SDL2
 		SDL2InputJoypad(int joypadIndex = 0) : base(joypadIndex)
 		{
 			if (joypadIndex < 0 || joypadIndex > 3) throw new ArgumentOutOfRangeException(nameof(joypadIndex));
-
-			//_controller = new Controller((UserIndex) joypadIndex);
 		}
 		
 		public SDL2InputJoypad(SDL2KeyStateManager sdl2KeyStateManager, int joypadIndex = 0) : base(joypadIndex)
@@ -19,8 +17,6 @@ namespace CrystalBoy.Emulator.SDL2
 			keyStateManager = sdl2KeyStateManager;
 			
 			if (joypadIndex < 0 || joypadIndex > 3) throw new ArgumentOutOfRangeException(nameof(joypadIndex));
-
-			//_controller = new Controller((UserIndex) joypadIndex);
 		}
 
 		public override GameBoyKeys DownKeys
@@ -40,8 +36,6 @@ namespace CrystalBoy.Emulator.SDL2
 						keys |= gbKey;
 					}
 				}
-
-				//Console.WriteLine(keys);
 
 				return keys;
 			}

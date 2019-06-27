@@ -76,8 +76,6 @@ namespace CrystalBoy.Emulator.SDL2
 			{
 				if (keys[i].gbKey != gbKey)
 					continue;
-
-				Console.WriteLine(keys[i].key);
 				
 				return keys[i].state;
 			}
